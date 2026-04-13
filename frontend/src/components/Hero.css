@@ -1,0 +1,287 @@
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 2rem 4rem;
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.hero-inner {
+  width: 100%;
+}
+
+.hero-tag {
+  font-size: 11px;
+  color: var(--green);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero-tag::before {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 1px;
+  background: var(--green);
+}
+
+.hero-name {
+  font-family: var(--sans);
+  font-size: clamp(40px, 8vw, 88px);
+  font-weight: 800;
+  line-height: 0.95;
+  color: #fff;
+  margin-bottom: 1rem;
+  letter-spacing: -2px;
+}
+
+.hero-name .accent {
+  color: var(--green);
+}
+
+.hero-title {
+  font-family: var(--mono);
+  font-size: clamp(14px, 2vw, 18px);
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.hero-title .cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1.1em;
+  background: var(--green);
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.hero-desc {
+  font-size: 14px;
+  color: var(--text);
+  max-width: 540px;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  border-left: 2px solid var(--green-dim);
+  padding-left: 1.25rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: #0a0e0a;
+}
+
+.btn-primary:hover {
+  background: #4be563;
+  transform: translateY(-1px);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--green);
+  border: 1px solid var(--green-dim);
+}
+
+.btn-ghost:hover {
+  background: var(--green-faint);
+  transform: translateY(-1px);
+}
+
+/* Hero decorative terminal */
+.hero-terminal {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: min(420px, 38vw);
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .hero-terminal {
+    display: block;
+  }
+}
+
+.term-bar {
+  background: var(--bg3);
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border-bottom: 1px solid var(--border-dim);
+}
+
+.term-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.td-r {
+  background: #ff5f57;
+}
+
+.td-y {
+  background: #febc2e;
+}
+
+.td-g {
+  background: #28c840;
+}
+
+.term-title {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: 8px;
+}
+
+.term-body {
+  padding: 16px;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.tc-g {
+  color: var(--green);
+}
+
+.tc-b {
+  color: var(--blue);
+}
+
+.tc-a {
+  color: var(--amber);
+}
+
+.tc-m {
+  color: var(--text-muted);
+}
+
+.tc-w {
+  color: #fff;
+}
+
+.type-line {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tl1 {
+  animation: type1 0.5s steps(40) 0.3s both;
+}
+
+.tl2 {
+  animation: type1 0.8s steps(50) 0.9s both;
+}
+
+.tl3 {
+  animation: type1 0.6s steps(40) 1.8s both;
+}
+
+.tl4 {
+  animation: type1 0.5s steps(30) 2.5s both;
+}
+
+.tl5 {
+  animation: type1 0.5s steps(30) 3.1s both;
+}
+
+.tl6 {
+  animation: type1 0.5s steps(30) 3.7s both;
+}
+
+.tl7 {
+  animation: type1 0.6s steps(35) 4.3s both;
+}
+
+.tl8 {
+  animation: type1 0.4s steps(25) 5s both;
+}
+
+.tl9 {
+  animation: type1 0.5s steps(30) 5.5s both;
+}
+
+@keyframes type1 {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+.hero-name-mobile {
+  display: none;
+}
+
+.pandey-accent {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 700px) {
+  #hero {
+    padding: 80px 1.25rem 2rem;
+    min-height: auto;
+    padding-top: 100px;
+  }
+
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .hero-name-desktop {
+    display: none;
+  }
+
+  .hero-name-mobile {
+    display: inline;
+  }
+
+  .hero-terminal {
+    display: none;
+  }
+}
